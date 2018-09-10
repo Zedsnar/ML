@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Plugin.CurrentActivity;
+using Xamarin.Forms;
 
 namespace Phoneword.Droid
 {
@@ -17,7 +19,8 @@ namespace Phoneword.Droid
 
             base.OnCreate(bundle);
             Instance = this;
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            Forms.Init(this, bundle);
+            CrossCurrentActivity.Current.Activity = this;
             LoadApplication(new App());
         }
 
