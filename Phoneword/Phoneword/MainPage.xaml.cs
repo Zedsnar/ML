@@ -49,5 +49,10 @@ namespace Phoneword
         {
             await Navigation.PushAsync(new CallHistoryPage());
         }
+
+        async void OnFibonacci(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CallFibonacciPage());
+        }
     }
 }
